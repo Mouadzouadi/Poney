@@ -17,22 +17,26 @@
 
 .client-info.active {
     left: 0; /* Ramène dans l'écran */
-}
-
-.toggle-aside {
+}.toggle-aside {
     position: fixed;
-    left: 1vw;
-    width: 25px;
-    height: 25px;
+    top: 4rem; /* Ajuste cette valeur selon la hauteur de ton header */
+    left: 1rem; /* Fixe la position à gauche */
+    width: 40px;
+    height: 40px;
     cursor: pointer;
-    z-index: 1001; /* Au-dessus de l'aside */
-    transition: left 0.3s ease; /* Animation coordonnée */
+    z-index: 1100; /* Devant tout */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
 }
 
-/* Déplace le bouton quand l'aside est ouvert */
+/* Supprimer le déplacement du toggle quand l'aside est actif */
 .client-info.active + .toggle-aside {
-    left: 320px; /* Largeur aside + 20px */
+    left: 1rem; /* Ne bouge pas */
+    top: 4rem;  /* Garde la même position */
 }
+
 
 .client-info .profile-pic img {
     width: 7rem;
@@ -91,14 +95,19 @@
     border: 1px solid #ffffff;
     border-radius: 0.5rem;
     transition: background-color 0.3s ease, color 0.3s ease;
-    margin-left: 9vw;
-    margin-top: 3rem;
+
 
 }
 
 .btn-modif:hover {
     background-color: #ffffff;
     color: #001f3f;
+}
+
+.div-modif{
+    display: flex;
+    justify-content: center;
+
 }
 
 @media screen and (max-width: 768px) {
@@ -134,3 +143,4 @@
     }
     
 }
+

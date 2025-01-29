@@ -52,7 +52,7 @@ function adjustTogglePosition() {
     // Vérifie si le toggle est initialement dans le header
     const headerRect = header.getBoundingClientRect();
     const toggleRect = toggleAside.getBoundingClientRect();
-    const toggleInHeader = toggleRect.top >= headerRect.top && toggleRect.bottom <= headerRect.bottom;
+    const toggleInHeader = toggleRect.top <= headerRect.bottom;
 
     if (toggleInHeader) {
         // Si le toggle est dans le header, positionne-le sous le header
@@ -76,6 +76,7 @@ document.querySelector('.toggle-aside').addEventListener('click', function (e) {
 
     const aside = document.querySelector('.client-info');
     aside.classList.toggle('active');
+    updateMenuIcon();
 });
 
 // Fermer l'aside au clic à l'extérieur
@@ -116,4 +117,9 @@ document.addEventListener("DOMContentLoaded", () => {
         updateMenuIcon();
         adjustTogglePosition();
     });
+    window.addEventListener("mousemove", () => {
+        updateMenuIcon();
+        adjustTogglePosition();
+    });
+    
 });

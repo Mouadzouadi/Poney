@@ -83,7 +83,9 @@ if (Auth::isUserLoggedIn()) {
                 </div>
                 
                 <h3>Informations Personnelles</h3>
-                <a class="btn-modif" href="index.php?action=modif_profil">Modifier</a>
+                <div class = "div-modif">
+                    <a class="btn-modif" href="index.php?action=modif_profil">Modifier</a>
+                </div>
                 <p><strong>Nom : </strong> <?= $user->firstName ?></p>
                 <p><strong>Prénom : </strong> <?= $user->lastName ?></p>
                 <p><strong>Email : </strong> <?= $user->email ?></p>
