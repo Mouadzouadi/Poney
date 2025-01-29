@@ -1,0 +1,136 @@
+.client-info {
+    width: 25vw; /* Largeur en pourcentage de la largeur de l'écran */
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    background-color: #001f3f; /* Couleur de fond */
+    padding: 1rem; /* Rembourrage interne */
+    position: fixed; /* Fixé par rapport à la fenêtre */
+    left: -6000px; /* Position initiale hors écran (à gauche) */
+    top: 0; /* Aligné en haut de la page */
+    transition: left 0.3s ease; /* Animation fluide pour la position gauche */
+    z-index: 1000; /* Au-dessus des autres éléments */
+    border-right: 0.125rem solid #ddd; /* Bordure droite fine et claire */
+    box-shadow: 0.125rem 0 0.375rem rgba(0, 0, 0, 0.1); /* Ombre pour un effet de profondeur */
+    border-radius: 0 0.5rem 0.5rem 0; /* Coins arrondis en haut et en bas à droite */
+    
+}
+
+
+.client-info.active {
+    left: 0; /* Ramène dans l'écran */
+}
+
+.toggle-aside {
+    position: fixed;
+    left: 1vw;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1001; /* Au-dessus de l'aside */
+    transition: left 0.3s ease; /* Animation coordonnée */
+}
+
+/* Déplace le bouton quand l'aside est ouvert */
+.client-info.active + .toggle-aside {
+    left: 320px; /* Largeur aside + 20px */
+}
+
+.client-info .profile-pic img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    border: 0.125rem solid #ffffff;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+
+.client-info .profile-pic img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    border: 0.125rem solid #ffffff;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.client-info .info h3 {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.client-info .info p {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #ffffff;
+}
+.btn_payer {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ffffff;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: 4rem;
+    margin-top: 2rem;
+}
+
+.btn_payer:hover {
+    background-color: #ffffff;
+    color: #001f3f;
+}
+
+.btn-modif{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ffffff;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: 9vw;
+    margin-top: 3rem;
+
+}
+
+.btn-modif:hover {
+    background-color: #ffffff;
+    color: #001f3f;
+}
+
+@media screen and (max-width: 768px) {
+    .client-info {
+        width: 50vw;
+    }
+
+    .client-info.active {
+        left: 0;
+    }
+
+
+
+    .client-info.active + .toggle-aside {
+        left: 80vw;
+    }
+    
+    
+}
+
+@media screen and (max-width: 480px) {
+    .client-info {
+        width: 75vw;   
+    }
+
+    .client-info.active {
+        left: 0;
+    }
+
+
+    .client-info.active + .toggle-aside {
+        left: 100vw;
+    }
+    
+}

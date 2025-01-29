@@ -1,0 +1,292 @@
+/* Style pour la section avec l'image de fond */
+.hero {
+    position: relative;
+    height: 75vh;
+    width: 100%;
+    background-image: url('../images/image_banniere.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 5%;
+    color: white;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 60%;
+    text-align: left;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    color: white;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 23px;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+/* Section avec l'image à droite */
+.section-with-image-right {
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5% 7%;
+}
+
+.button-image-right{
+    padding-left: 7%;
+    
+   
+}
+
+
+.text1 {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.text1 h1 {
+    font-size: 36px;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.text1 p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 15px 25px;
+    background-color: #111F33;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #172941;
+    transform: scale(1.05);
+    color: rgb(206);
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.image-container img {
+    width: 70%;
+    max-width: none;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Section des poneys */
+.section-poneys {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.titre-poneys {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.poney-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.poney-box {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.poney-box img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.poney-description {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.poney-description h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #17280b;
+}
+
+.poney-description p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.carousel-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: #1b3552;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* Media queries pour la réactivité */
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 60vh;
+        padding-left: 3%;
+    }
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .section-with-image-right {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .text1 h1 {
+        font-size: 28px;
+    }
+
+    .text1 p {
+        font-size: 16px;
+    }
+
+    .poney-carousel {
+        max-width: 100%;
+    }
+
+    .poney-box img {
+        max-height: 250px;
+    }
+
+    .poney-description h2 {
+        font-size: 1.25rem;
+    }
+
+    .poney-description p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .text1 h1 {
+        font-size: 24px;
+    }
+
+    .text1 p {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .carousel-btn {
+        font-size: 1.2rem;
+        padding: 8px 12px;
+    }
+}
+
+

@@ -1,0 +1,122 @@
+footer {
+    background-color: #001f3f;
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+    text-align: center;
+}
+
+footer .col1, footer .col2, footer .col3 {
+    flex: 1;
+    margin: 1rem;
+    min-width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    width: fit-content;
+}
+
+footer .col1 img {
+    width: 20%;
+    max-width: 100%;
+    margin-top: 1rem;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+footer .horizontal {
+    flex-basis: 100%;
+    margin-top: 2rem;
+    border-top: 0.1rem solid #ffffff;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+/* Media queries pour la réactivité */
+@media screen and (max-width: 1024px) {
+    footer .col1, footer .col2, footer .col3 {
+        min-width: 30%;  /* Augmente la largeur minimale des colonnes sur des écrans moyens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        flex-direction: column; /* Affiche les colonnes en pile sur les petits écrans */
+        align-items: center;
+        padding: 1rem; /* Réduit l'espace intérieur */
+    }
+
+    footer .col1, footer .col2, footer .col3 {
+        min-width: 100%; /* Les colonnes prennent toute la largeur */
+        margin: 0.5rem 0; /* Réduit l'espace entre les colonnes */
+    }
+
+    footer h3 {
+        font-size: 1.2rem; /* Réduit la taille du titre pour les petits écrans */
+        margin-bottom: 0.3rem; /* Réduit la marge sous les titres */
+    }
+
+    footer ul li {
+        font-size: 0.9rem; /* Réduit la taille des éléments de la liste */
+        margin: 0.3rem 0; /* Réduit les marges entre les éléments de la liste */
+    }
+
+    footer p {
+        font-size: 0.8rem; /* Réduit la taille du texte */
+        margin: 0.3rem 0; /* Réduit l'espace entre les paragraphes */
+    }
+
+    footer .col1 img {
+        width: 30%; /* Réduit la taille de l'image dans la première colonne */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    footer {
+        padding: 1rem; /* Réduit l'espace intérieur du footer */
+    }
+
+    footer h3 {
+        font-size: 1.1rem; /* Taille encore plus petite pour les très petits écrans */
+        margin-bottom: 0.2rem; /* Réduit encore la marge sous les titres */
+    }
+
+    footer .col1 img {
+        width: 20%; /* Ajuste la taille de l'image */
+    }
+
+    footer ul li {
+        font-size: 0.8rem; /* Ajuste encore plus la taille des éléments de la liste */
+        margin: 0.2rem 0; /* Réduit encore plus la marge entre les éléments de la liste */
+    }
+
+    footer p {
+        font-size: 0.7rem; /* Réduit la taille du texte */
+        margin: 0.2rem 0; /* Réduit l'espace entre les paragraphes */
+    }
+}

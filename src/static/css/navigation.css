@@ -1,0 +1,68 @@
+/* Styles généraux pour la navigation de la semaine */
+.week-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 2vh 2vw; /* Espacement basé sur la hauteur et la largeur de la fenêtre */
+    border-radius: 1vh;
+    box-shadow: 0 0.5vh 2vh rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Boutons de navigation */
+.arrow-btn {
+    background-color: #183453;
+    color: white;
+    padding: 1.5vh 2vw; /* Espacement relatif pour les boutons */
+    border: none;
+    border-radius: 1vh;
+    text-decoration: none;
+    font-size: 1.5vh; /* Taille de police en fonction de la hauteur de la fenêtre */
+    transition: background-color 0.3s ease;
+}
+
+.arrow-btn:hover {
+    background-color: #1f5085;
+}
+
+/* Texte de la semaine courante */
+#current-week {
+    font-size: 2vh; /* Taille de police relative à la hauteur de la fenêtre */
+    font-weight: bold;
+    color: #333;
+    margin: 0 5%; /* Espacement horizontal en pourcentage */
+    text-align: center;
+    flex-grow: 1; /* Le texte prend tout l'espace disponible */
+}
+
+/* Media queries pour la réactivité */
+@media screen and (max-width: 768px) {
+    .week-navigation {
+        padding: 2vh 2vw;
+    }
+
+    #current-week {
+        font-size: 1.8vh;
+    }
+
+    .arrow-btn {
+        font-size: 1.3vh;
+        padding: 1.2vh 1.5vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .week-navigation {
+        padding: 1.5vh 2vw;
+    }
+
+    #current-week {
+        font-size: 1.6vh;
+    }
+
+    .arrow-btn {
+        font-size: 1.2vh;
+        padding: 1vh 1.2vw;
+    }
+}

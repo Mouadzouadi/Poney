@@ -1,0 +1,132 @@
+/* Style global */
+.page {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh; /* S'assure que la page occupe toute la hauteur de l'écran */
+}
+
+/* Conteneur principal */
+.login-container {
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 30rem;
+    text-align: center;
+    margin: 5% auto;
+}
+
+/* Titre */
+.login-container h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Conteneur des champs d'entrée */
+.input-container {
+    margin-bottom: 1rem;
+}
+
+/* Champs d'entrée */
+input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Organisation des champs côte à côte */
+.input-row {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Ajustement pour les champs alignés */
+.input-row .input-container {
+    flex: 1;
+}
+
+/* Bouton de soumission */
+button {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0e0e17;
+}
+
+/* Lien continuer/payer */
+.continue-link {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    color: #cf0000;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font: bold;
+}
+
+.continue-link:hover {
+    text-decoration: underline;
+    color: #960000;
+    font: bold;
+}
+
+/* Message d'erreur */
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+
+h4{
+    margin-bottom: 2%;
+}
+
+#error-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff; /* Couleur blanche */
+    color: #333333; /* Texte en gris foncé */
+    border: 1px solid #cccccc; /* Bordure grise */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 20px;
+    max-width: 300px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre */
+    z-index: 1000;
+}
+
+#error-popup button {
+    background-color: #f0f0f0; /* Bouton gris clair */
+    color: #333333; /* Texte du bouton */
+    border: 1px solid #cccccc; /* Bordure similaire à celle du popup */
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#error-popup button:hover {
+    background-color: #e6e6e6; /* Légère variation de gris clair au survol */
+}
