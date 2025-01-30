@@ -70,7 +70,7 @@ class Router
                 break;
             case 'paiement':
                 Auth::checkUserLoggedIn();
-                self::render('paiement.php', 'Paiement', ['paiement.css']);
+                self::render('reservation/pay.php', 'Paiement', ['paiement.css']);
                 break;
 
             case 'dashboard':
